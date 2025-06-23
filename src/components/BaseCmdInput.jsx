@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaRegSquareFull } from "react-icons/fa6";
 
-export default function BaseCmdInput({ cmdInput, isInput, onCreate }) {
+export default function BaseCmdInput({ cmdInput, isInput, onCreate, inputRef }) {
     const [inputValue, setInputValue] = useState("");
 
     function handleSubmit(e) {
@@ -23,6 +23,7 @@ export default function BaseCmdInput({ cmdInput, isInput, onCreate }) {
                 <form onSubmit={handleSubmit} className="ml-0.5 block">
                     <input
                         type="text"
+                        ref={inputRef}
                         className="bg-transparent border-none text-white focus:outline-none w-190"
                         placeholder="try bio, about, contact"
                         value={inputValue}
