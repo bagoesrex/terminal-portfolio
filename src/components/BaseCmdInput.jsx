@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaRegSquareFull } from "react-icons/fa6";
 
-export default function BaseCmdInput({ cmdInput, isInput }) {
+export default function BaseCmdInput({ cmdInput, isInput, onCreate }) {
     const [inputValue, setInputValue] = useState("");
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log("Submitted:", inputValue);
+        onCreate(inputValue)
         setInputValue("");
     }
 
@@ -18,13 +18,13 @@ export default function BaseCmdInput({ cmdInput, isInput }) {
             <FaRegSquareFull size={8} className="rotate-45" />
 
             {!isInput ? (
-                <span className="ml-0.5">{cmdInput}</span>
+                <span className="ml-0.5 max-w-190 overflow-hidden">{cmdInput}</span>
             ) : (
-                <form onSubmit={handleSubmit} className="ml-0.5">
+                <form onSubmit={handleSubmit} className="ml-0.5 block">
                     <input
                         type="text"
-                        className="bg-transparent border-none text-white focus:outline-none"
-                        placeholder="try ls , bio , skill , contact, about..."
+                        className="bg-transparent border-none text-white focus:outline-none w-190"
+                        placeholder="try bio, about, contact"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         autoFocus
