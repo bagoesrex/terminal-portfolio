@@ -1,4 +1,4 @@
-export function getFormattedDate(date, locale = "id-ID") {
+export function getFormattedDate(date, locale = "us-US") {
   return date.toLocaleDateString(locale, {
     weekday: "long",
     year: "numeric",
@@ -7,7 +7,7 @@ export function getFormattedDate(date, locale = "id-ID") {
   });
 }
 
-export function getFormattedTime(date, locale = "id-ID") {
+export function getFormattedTime(date, locale = "us-US") {
   return date.toLocaleTimeString(locale, {
     hour: "2-digit",
     minute: "2-digit",
