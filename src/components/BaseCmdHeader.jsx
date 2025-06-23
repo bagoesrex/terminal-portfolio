@@ -1,4 +1,4 @@
-export default function BaseCmdHeader() {
+export default function BaseCmdHeader({ currentTime }) {
     return (
         <div className="flex absolute items-center space-x-1 left-2.5">
             <span className="text-blue-700 font-bold">[</span>
@@ -10,7 +10,7 @@ export default function BaseCmdHeader() {
             <span className="text-blue-700 font-bold">]</span>
             <span>-</span>
             <span className="text-blue-700 font-bold">[</span>
-            <span>{new Date().toLocaleString()}</span>
+            <span>{currentTime}</span>
             <span className="text-blue-700 font-bold">]</span>
         </div>
 
