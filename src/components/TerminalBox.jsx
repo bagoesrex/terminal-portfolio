@@ -8,7 +8,7 @@ const DUMMY_DATA = [
     {
         cmd: "neofetch",
         Component: About,
-        time: new Date().toLocaleTimeString()
+        time: new Date()
     },
 ];
 
@@ -21,7 +21,7 @@ export default function TerminalBox({ inputRef }) {
         const entryCmd = renderCmd(trimmedInput);
         const newEntry = {
             ...entryCmd,
-            time: new Date().toLocaleTimeString(),
+            time: new Date(),
         };
         setEnteredCmd((prev) => [...prev, newEntry]);
     }
