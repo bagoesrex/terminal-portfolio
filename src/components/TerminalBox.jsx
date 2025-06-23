@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import About from "./commands/About";
 import ReadOnlyCmd from "./ReadOnlyCmd";
 import BaseCmd from "./BaseCmd";
@@ -14,6 +14,7 @@ const DUMMY_DATA = [
 
 export default function TerminalBox({ inputRef }) {
     const [enteredCmd, setEnteredCmd] = useState(DUMMY_DATA);
+    const bottomRef = useRef(null);
 
     function handleEnteredCommand(inputCmd) {
         const trimmedInput = inputCmd.trim().toLowerCase();
@@ -25,6 +26,10 @@ export default function TerminalBox({ inputRef }) {
         setEnteredCmd((prev) => [...prev, newEntry]);
     }
 
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "instant" });
+    }, [enteredCmd]);
+
     return (
         <div
             className="max-w-4xl h-[55vh] mx-auto p-4 text-[13px] font-mono text-gray-300 overflow-y-auto 
@@ -34,6 +39,7 @@ export default function TerminalBox({ inputRef }) {
                 <ReadOnlyCmd key={index} enteredCmd={cmd} />
             ))}
             <BaseCmd isInput={true} onCreate={handleEnteredCommand} inputRef={inputRef} />
+            <div ref={bottomRef} />
         </div>
     );
 }
