@@ -1,5 +1,6 @@
 import './App.css'
 import BackgroundImage from './components/BackgroundImage'
+import Navbar from './components/Navbar'
 import TerminalBox from './components/TerminalBox'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
           <TerminalBox />
         </div>
       </div>
+      <Navbar />
       <BackgroundImage />
     </>
   )
