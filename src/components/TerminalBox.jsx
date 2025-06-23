@@ -1,6 +1,7 @@
 import { useState } from "react";
 import About from "./commands/About";
 import ReadOnlyCmd from "./ReadOnlyCmd";
+import BaseCmd from "./BaseCmd";
 
 const DUMMY_DATA = [
     {
@@ -29,6 +30,7 @@ export default function TerminalBox() {
             {enteredCmd.map((cmd, index) => (
                 <ReadOnlyCmd key={index} enteredCmd={cmd} />
             ))}
+            <BaseCmd isInput={true} />
         </div>
     );
 }
