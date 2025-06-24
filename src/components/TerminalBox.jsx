@@ -33,7 +33,7 @@ export default function TerminalBox({ inputRef }) {
     }, []);
 
     useEffect(() => {
-        bottomRef.current?.scrollIntoView({ behavior: "instant" });
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [enteredCmd]);
 
     return (
