@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import ReadOnlyCmd from "./ReadOnlyCmd";
 import BaseCmd from "./BaseCmd";
 import renderCmd from "../utils/renderCmd";
@@ -16,7 +16,7 @@ export default function TerminalBox({ inputRef }) {
     const [enteredCmd, setEnteredCmd] = useState(defaultCommands);
     const bottomRef = useRef(null);
 
-    function handleEnteredCommand(inputCmd) {
+    const handleEnteredCommand = useCallback((inputCmd) => {
         const trimmedInput = inputCmd.trim().toLowerCase();
         const entryCmd = renderCmd(trimmedInput);
 
@@ -30,8 +30,7 @@ export default function TerminalBox({ inputRef }) {
             time: new Date(),
         };
         setEnteredCmd((prev) => [...prev, newEntry]);
-    }
-
+    }, []);
 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "instant" });
