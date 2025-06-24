@@ -6,6 +6,7 @@ export default function BaseCmdInput({ cmdInput, isInput, onCreate, inputRef }) 
 
     function handleSubmit(e) {
         e.preventDefault();
+        if (!inputValue.trim()) return;
         onCreate(inputValue)
         setInputValue("");
     }
