@@ -1,10 +1,10 @@
 import Animate from "react-smooth";
-import { SiFlutter, SiReact, SiVercel } from "react-icons/si";
+import { SiReact, SiTailwindcss, SiVercel } from "react-icons/si";
 
 export default function About() {
     const techStacks = [
         {
-            Icon: SiFlutter,
+            Icon: SiTailwindcss,
             color: "text-blue-500",
             duration: "500"
         },
