@@ -15,9 +15,13 @@ export default function HelpList() {
             detail: "Show contact information",
         },
         {
+            cmd: "neofetch",
+            detail: "Show system and hardware information"
+        },
+        {
             cmd: "ls",
             detail: "List available commands",
-        },
+        }
     ];
     return (
         <div className="">
