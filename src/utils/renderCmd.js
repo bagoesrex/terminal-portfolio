@@ -1,6 +1,7 @@
 import About from "../components/commands/About";
 import Bio from "../components/commands/Bio";
 import Contact from "../components/commands/Contact";
+import HelpList from "../components/commands/HelpList";
 import NotFound from "../components/commands/NotFound";
 
 export default function renderCmd(cmd) {
@@ -21,6 +22,12 @@ export default function renderCmd(cmd) {
       return {
         cmd,
         Component: Contact,
+        time: "",
+      };
+    case "ls":
+      return {
+        cmd,
+        Component: HelpList,
         time: "",
       };
     default:

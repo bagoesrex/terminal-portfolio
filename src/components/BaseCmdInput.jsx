@@ -25,7 +25,7 @@ export default function BaseCmdInput({ cmdInput, isInput, onCreate, inputRef }) 
                         type="text"
                         ref={inputRef}
                         className="bg-transparent border-none text-white focus:outline-none w-190"
-                        placeholder="try bio, about, contact"
+                        placeholder="try ls, bio, about, contact"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         autoFocus
