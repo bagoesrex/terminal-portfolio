@@ -22,13 +22,13 @@ export default function BaseCmdInput({ cmdInput, isInput, onCreate, inputRef }) 
             />
 
             {!isInput ? (
-                <span className="ml-0.5 max-w-190 overflow-hidden text-gray-200">{cmdInput}</span>
+                <span className="ml-0.5 max-w-[50vh] overflow-hidden text-gray-200">{cmdInput}</span>
             ) : (
                 <form onSubmit={handleSubmit} className="ml-0.5 block">
                     <input
                         type="text"
                         ref={inputRef}
-                        className="bg-transparent border-none text-gray-200 focus:outline-none w-190"
+                        className="bg-transparent border-none text-gray-200 focus:outline-none w-[50vh]"
                         placeholder="try ls, bio, about, contact"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
