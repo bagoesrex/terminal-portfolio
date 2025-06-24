@@ -61,9 +61,9 @@ export default function Neofetch() {
             duration={400}
             easing="ease-in-out"
         >
-            <div className="flex">
+            <div className="flex text-gray-200">
                 <div>
-                    <pre className="text-red-100 text-[5px] whitespace-pre-wrap">{megumin}</pre>
+                    <pre className="text-red-200 text-[5px] whitespace-pre-wrap">{megumin}</pre>
                 </div>
                 <div className="flex flex-col ml-10 gap-0.2">
                     <h2 className="w-57 border-t-2 border-white pt-1">Hardware Information</h2>

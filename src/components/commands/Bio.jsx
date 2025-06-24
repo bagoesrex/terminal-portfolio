@@ -42,8 +42,7 @@ export default function Bio() {
             duration={400}
             easing="ease-in-out"
         >
-            <div className="flex flex-col gap-2">
-
+            <div className="flex flex-col gap-2 text-gray-200">
                 <div className="flex">
                     <img
                         src="/me.png"

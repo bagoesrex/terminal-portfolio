@@ -44,8 +44,8 @@ export default function HelpList() {
                         easing="ease-in-out"
                     >
                         <div className="flex items-center" key={index}>
-                            <h1 className="text-green-300 my-0.5 w-35">{cmd}</h1>
-                            <p>{detail}</p>
+                            <h1 className="text-green-400 my-0.5 w-35">{cmd}</h1>
+                            <p className="text-gray-200">{detail}</p>
                         </div>
                     </Animate>
                 );

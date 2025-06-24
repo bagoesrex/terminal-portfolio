@@ -30,7 +30,7 @@ export default function Contact() {
                         easing="ease-in-out"
                     >
                         <div className="flex items-center" key={index}>
-                            <h1 className="text-green-300 my-0.5 w-35">{text}</h1>
+                            <h1 className="text-green-400 my-0.5 w-35">{text}</h1>
                             <a
                                 href={href}
                                 className="flex-1 no-underline text-blue-300 hover:underline"

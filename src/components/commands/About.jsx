@@ -22,7 +22,7 @@ export default function About() {
 
     return (
         <div>
-            <div>
+            <div className="text-gray-200">
                 <Animate
                     from={{
                         opacity: 0,
@@ -35,12 +35,12 @@ export default function About() {
                     duration={400}
                     easing="ease-in-out"
                 >
-                    <h1 className="text-green-300">Overview</h1>
+                    <h1 className="text-green-400">Overview</h1>
                     <p className="mb-3">
                         Terminal Portfolio is a unique approach to showcasing personal projects and skills,
                         presented in a terminal-inspired interface to create a nostalgic and developer-centric experience.
                     </p>
-                    <h1 className="text-green-300">Tech Stack</h1>
+                    <h1 className="text-green-400">Tech Stack</h1>
                     <p className="mb-3">
                         This site is built using React and Tailwind CSS for a fast and responsive UI. It is deployed on Vercel for reliable and efficient hosting.
                     </p>
