@@ -2,6 +2,7 @@ import About from "../components/commands/About";
 import Bio from "../components/commands/Bio";
 import Contact from "../components/commands/Contact";
 import HelpList from "../components/commands/HelpList";
+import Neofetch from "../components/commands/Neofetch";
 import NotFound from "../components/commands/NotFound";
 
 export default function renderCmd(cmd) {
@@ -28,6 +29,12 @@ export default function renderCmd(cmd) {
       return {
         cmd,
         Component: HelpList,
+        time: "",
+      };
+    case "neofetch":
+      return {
+        cmd,
+        Component: Neofetch,
         time: "",
       };
     default:

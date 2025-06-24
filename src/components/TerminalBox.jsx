@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import About from "./commands/About";
 import ReadOnlyCmd from "./ReadOnlyCmd";
 import BaseCmd from "./BaseCmd";
 import renderCmd from "../utils/renderCmd";
+import Neofetch from "./commands/Neofetch";
 
 const DUMMY_DATA = [
     {
         cmd: "neofetch",
-        Component: About,
+        Component: Neofetch,
         time: new Date()
     },
 ];
