@@ -48,7 +48,7 @@ export default function Bio() {
                     <img
                         src="/me.png"
                         alt="Bio Image"
-                        className="size-25 rounded-full border-2 border-green-300 object-cover"
+                        className="size-25 rounded-full border-2 border-green-300 object-cover pointer-events-none select-none"
                     />
                     <div className="flex item-center justify-center flex-col ml-3">
                         <div className="flex gap-1 items-center">
