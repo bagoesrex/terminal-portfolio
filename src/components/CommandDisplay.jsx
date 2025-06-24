@@ -1,6 +1,6 @@
 export default function CommandDisplay({ children }) {
     return (
-        <div className="flex w-full">
+        <div className="flex w-full pt-0.3 pb-1">
             {children}
         </div>
     )
