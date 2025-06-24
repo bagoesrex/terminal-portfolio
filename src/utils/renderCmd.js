@@ -37,6 +37,14 @@ export default function renderCmd(cmd) {
         Component: Neofetch,
         time: "",
       };
+    case "clear":
+    case "cls":
+      return {
+        cmd,
+        Component: null,
+        action: "clear",
+        time: "",
+      };
     default:
       return {
         cmd,

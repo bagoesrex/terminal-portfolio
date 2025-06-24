@@ -4,7 +4,7 @@ import BaseCmd from "./BaseCmd";
 import renderCmd from "../utils/renderCmd";
 import Neofetch from "./commands/Neofetch";
 
-const DUMMY_DATA = [
+const defaultCommands = [
     {
         cmd: "neofetch",
         Component: Neofetch,
@@ -13,18 +13,25 @@ const DUMMY_DATA = [
 ];
 
 export default function TerminalBox({ inputRef }) {
-    const [enteredCmd, setEnteredCmd] = useState(DUMMY_DATA);
+    const [enteredCmd, setEnteredCmd] = useState(defaultCommands);
     const bottomRef = useRef(null);
 
     function handleEnteredCommand(inputCmd) {
         const trimmedInput = inputCmd.trim().toLowerCase();
         const entryCmd = renderCmd(trimmedInput);
+
+        if (entryCmd.action === "clear") {
+            setEnteredCmd([]);
+            return;
+        }
+
         const newEntry = {
             ...entryCmd,
             time: new Date(),
         };
         setEnteredCmd((prev) => [...prev, newEntry]);
     }
+
 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "instant" });

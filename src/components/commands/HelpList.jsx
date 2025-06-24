@@ -21,6 +21,10 @@ export default function HelpList() {
         {
             cmd: "ls",
             detail: "List available commands",
+        },
+        {
+            cmd: "clear/cls",
+            detail: "Clear the terminal screen",
         }
     ];
     return (
