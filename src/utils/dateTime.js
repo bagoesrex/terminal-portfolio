@@ -1,6 +1,5 @@
 export function getFormattedDate(date, locale = "us-US") {
   return date.toLocaleDateString(locale, {
-    weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",

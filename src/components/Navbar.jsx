@@ -18,7 +18,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="absolute top-0 w-full h-8 px-2 flex items-center justify-between text-sm text-white z-10">
+            <div className="absolute top-0 w-full h-8 px-2 flex items-center justify-between text-[11px] text-white z-10">
                 <IoWaterOutline />
 
                 <div className="flex items-center gap-1">
